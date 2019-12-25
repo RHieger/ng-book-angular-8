@@ -2,6 +2,8 @@
 
 <ul>
   <li *ngFor="let name of names">
-    Hello {{ name }}!
+   <app-user-item [name]="name">
+     <!-- Dynamic content lives here. -->
+   </app-user-item>
   </li>
 </ul>
