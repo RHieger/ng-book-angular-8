@@ -1,0 +1,25 @@
+<!-- Menu Bar -->
+<div class="ui menu">
+  <div class="ui container">
+    <a href="#" class="header item">
+      <img class="logo"
+           src="assets/images/ng-book-2-minibook.png" />
+      ng-book 2
+    </a>
+    <div class="header item borderless">
+      <h1 class="ui header">
+        Angular Forms
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="ui stackable grid container">
+  <div class="six wide column">
+    <app-sidebar [items]="examples"></app-sidebar>
+  </div>
+
+  <div class="ui main text container ten wide column">
+    <router-outlet></router-outlet>
+  </div>
+</div>

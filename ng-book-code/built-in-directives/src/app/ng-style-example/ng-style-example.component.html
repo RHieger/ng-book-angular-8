@@ -1,0 +1,66 @@
+<h4 class="ui horizontal divider header">
+  style.background-color
+</h4>
+
+<div [style.background-color]="'yellow'">
+  Uses fixed yellow background
+</div>
+
+<h4 class="ui horizontal divider header">
+  ngStyle literal
+</h4>
+
+<div [ngStyle]="{color: 'white', 'background-color': 'blue'}">
+  Uses fixed white text on blue background
+</div>
+
+<h4 class="ui horizontal divider header">
+  ngStyle literal and style.font-size.px
+</h4>
+
+<div>
+  <span [ngStyle]="{color: 'red'}" [style.font-size.px]="fontSize">
+    red text
+  </span>
+</div>
+
+<h4 class="ui horizontal divider header">
+  ngStyle with an object
+</h4>
+
+<div [ngStyle]="style"></div>
+
+<h4 class="ui horizontal divider header">
+  ngStyle with object property from variable
+</h4>
+
+<div>
+  <span [ngStyle]="{color: color}">
+    {{ color }} text
+  </span>
+</div>
+
+<h4 class="ui horizontal divider header">
+  style from variable
+</h4>
+
+<div [style.background-color]="color"
+     style="color: white;">
+  {{ color }} background
+</div>
+
+<h4 class="ui horizontal divider header">
+  Play with the color and font-size here
+</h4>
+
+<div class="ui input">
+  <input type="text" name="color" value="{{color}}" #colorinput>
+</div>
+
+<div class="ui input">
+  <input type="text" name="fontSize" value="{{fontSize}}" #fontinput>
+</div>
+
+<button class="ui primary button" (click)="apply(colorinput.value, fontinput.value)">
+  Apply settings
+</button>

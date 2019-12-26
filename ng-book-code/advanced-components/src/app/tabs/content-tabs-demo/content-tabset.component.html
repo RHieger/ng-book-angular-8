@@ -1,0 +1,11 @@
+<div class="ui top attached tabular menu">
+  <a *ngFor="let tab of tabs"
+     class="item"
+     [class.active]="tab.active"
+     (click)="setActive(tab)">
+
+    {{ tab.title }}
+
+  </a>
+</div>
+<ng-content></ng-content>

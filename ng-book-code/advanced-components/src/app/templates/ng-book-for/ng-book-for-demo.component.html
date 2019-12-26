@@ -1,0 +1,23 @@
+<ul>
+  <li *ngBookFor="let p of people">
+    {{ p.name }} is {{ p.age }}
+    <a href (click)="remove(p)">Remove</a>
+  </li>
+</ul>
+
+<div class="ui form">
+  <div class="fields">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" #name placeholder="Name">
+    </div>
+    <div class="field">
+      <label>Age</label>
+      <input type="text" #age placeholder="Age">
+    </div>
+  </div>
+</div>
+<div class="ui submit button"
+     (click)="add(name, age)">
+  Add
+</div>

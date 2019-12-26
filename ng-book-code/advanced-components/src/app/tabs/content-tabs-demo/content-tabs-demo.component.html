@@ -1,0 +1,14 @@
+<tabset>
+  <tab title="First tab">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Quibusdam magni quia ut harum facilis, ullam deleniti porro
+    dignissimos quasi at molestiae sapiente natus, neque voluptatum
+    ad consequuntur cupiditate nemo sunt.
+  </tab>
+
+  <tab
+     *ngFor="let tab of tabs"
+     [title]="tab.title">
+    {{ tab.content }}
+  </tab>
+</tabset>

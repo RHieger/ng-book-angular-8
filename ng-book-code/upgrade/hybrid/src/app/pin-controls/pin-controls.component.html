@@ -1,0 +1,8 @@
+<div class="controls">
+  <div class="heart">
+    <a (click)="toggleFav()">
+      <img src="/assets/images/icons/Heart-Empty.png" *ngIf="!pin.faved" />
+      <img src="/assets/images/icons/Heart-Red.png"   *ngIf="pin.faved" />
+    </a>
+  </div>
+</div>

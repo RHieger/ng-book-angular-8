@@ -1,0 +1,31 @@
+<div class="ui feed">
+  <div class="event">
+    <div class="label" *ngIf="comment.author">
+      <img src="assets/images/avatars/{{comment.author.toLowerCase()}}.jpg">
+    </div>
+    <div class="content">
+      <div class="summary">
+        <a class="user">
+          {{comment.author}}
+        </a> posted a comment
+        <div class="date">
+          1 Hour Ago
+        </div>
+      </div>
+      <div class="extra text">
+        {{comment.comment}}
+      </div>
+      <div class="meta">
+        <a class="trash" (click)="remove()">
+          <i class="trash icon"></i> Remove
+        </a>
+        <a class="trash" (click)="clear()">
+          <i class="eraser icon"></i> Clear
+        </a>
+        <a class="like" (click)="like()">
+          <i class="like icon"></i> {{comment.likes}} Likes
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
